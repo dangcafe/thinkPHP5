@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cn">
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js" ></script><!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理</title>
+</head>
+<body>
+	<h1 style="text-align:center;">账号管理中心</h1>
+<!-- 	<ul class="nav nav-tabs nav-justified nav-pills">
+	  <li role="presentation" class="active"><a href="/admin/admin/index">用户管理</a></li>
+	  <li role="presentation"><a href="/admin/admin/paylist">充值管理</a></li>
+	  <li role="presentation"><a href="/admin/admin/artic">资讯管理</a></li>
+	  <li role="presentation"><a href="/admin/admin/jiepan">实时解盘</a></li>
+	</ul>
+	<br> -->
+	<ul class="nav nav-tabs  nav-pills">
+	  <li role="presentation"><a href="/admin/admin/index">所有账户</a></li>
+	  <li role="presentation" ><a href="/admin/admin/add">添加账户</a></li>
+	  <li role="presentation" ><a href="/admin/admin/search">帐号查询</a></li>	  
+	  <li role="presentation" class="active"><a href="">查询结果</a></li>
+	</ul>
+	<form class="form-horizontal" action="/admin/admin/edit" method='post'>
+	
+		
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">账号:</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='181' value='{$userlist.4.info}' placeholder="账号">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='182' value='{$userlist.3.info}' placeholder="密码">
+	    </div>
+	  </div>		  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">姓名：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='189' value='{$userlist.0.info}' placeholder="姓名">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">手机号：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='100' value='{$userinfo.username}' placeholder="手机号">
+		</div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">身份证号：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='106' value='{$userlist.7.info}' placeholder="身份证号">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">邀请码：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='100' value='{$userlist.8.info}' placeholder="邀请码">
+	    </div>
+	  </div>	  
+	  </div>	 
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">邮箱：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='183' value='{$userlist.2.info}' placeholder="邮箱">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">开户行信息：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='188' value='{$userlist.1.info}' placeholder="开户行信息">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">银行卡号：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='165' value='{$userlist.5.info}' placeholder="银行卡号">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">银行所属人：</label>
+	    <div class="col-sm-10">
+	      	<input type="text" class="form-control" name='164' value='{$userlist.6.info}' placeholder="银行所属人">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-default">提交</button>
+	    </div>
+	  </div>
+	</form>
+</body>
+</html>

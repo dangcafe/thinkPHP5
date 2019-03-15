@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,input {
+    margin: 0;padding: 0;
+}
+body{font-family:"Microsoft YaHei","微软雅黑","MicrosoftJhengHei"}
+ul,li{list-style:none}
+img{vertical-align:top;border:0}
+a:link,a:visited{text-decoration:none}
+
+/*公共样式*/
+.clearfix:after{content:"";display:block;height:0;clear:both}
+.clearfix{zoom:1}
+
+.fl{float:left}
+.fr{float:right}
+
+body{background-color:#fff}
+.w1024,
+.wrap{ width:1000px !important; margin:0 auto;}
+.hide{display:none}
+.scale7{transform:scale(0.7)}
+.scale5{transform:scale(0.5)}
+body img{
+    /*图片不被先中*/
+    -webkit-user-select:none;
+    user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/*头部样式*/
+.header *{
+    /*过渡*/
+    transition: all 0.3s;
+}
+.header{
+    width:100%;height:74px;background-color:#fff;
+    font-size:14px;z-index:111;
+    position:fixed;left:0;right:0;top:0;
+    /*过渡*/
+    transition: height 0.4s;
+}
+.header.fixed{
+    height:40px;
+}
+.header .logo{float:left;width:318px;height:49px;margin-top:12px;}
+.header .logo a{
+    display:block;width:100%;height:100%;text-indent:-9999px;overflow:hidden;
+    background:url(../images/common/logo.png) no-repeat 0 0;
+    background-size:318px 49px;
+    outline: 0;
+}
+.header.fixed .logo{height:34px;margin-top:3px}
+.header.fixed .logo a{
+    background-size:161px 25px;
+}
+
+/*导航样式*/
+.header .nav{float:left;position:relative}
+
+.header .nav ul li {
+    float: left;
+    position: relative;
+}
+.header .nav a {
+    float:left;display:block;padding:0 15px;color:#465058;font-size:16px;
+    height:74px;line-height:74px;position:relative;z-index:11;  font-weight: 600;
+}
+.header .nav a:hover,
+.header .nav li.current a{color:#4EC2EA}
+
+.header .nav .smenu{
+    display:none;
+    position: absolute;
+    left: 2px;
+    top: 74px;
+    width: 117px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+}
+.header .nav .smenu.inview{
+    opacity: 1;
+    transform: translateY(0);
+}
+.header .nav .smenu::before{
+    content:" ";display:block;border-left:1px solid #51C1E9;border-top:1px solid #51C1E9;
+    width:10px;height:10px;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform:translateX(-50%) rotate(45deg);z-index:115;
+}
+.header .nav .smenu .mspace{
+    height: 9px;
+    background:transparent;
+}
+.header .nav .smenu .mtm{
+    width:117px;height:39px;text-align:center;
+    border:1px solid #51C1E9;
+    border-top:0;
+    background:#fff;
+}
+
+.header .nav .smenu .mtm:nth-of-type(2){
+    border-top: 1px solid #51C1E9;
+}
+.header .nav .smenu .mtm a{width:100%;padding:0;color:#465058;display:block;height:39px;line-height:39px;white-space:nowrap}
+.header .nav .smenu .mtm a:hover{color:#4EC2EA}
+
+.header.fixed {box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.header.fixed .nav a{height:40px;line-height:40px}
+.header.fixed .nav .smenu{
+    top:40px;
+}
+.header.fixed .nav .smenu .mtm a{padding:0;width:117px;height:39px;line-height:39px;}
+
+/*基本信息样式*/
+.header .info{float:right;width:auto;}
+.header .info .user {
+    float:right;margin-top:24px;
+}
+.header.fixed .user{
+    margin-top:8px;
+}
+.header .info .lgBtn{
+    display:inline-block;font-size:16px;color:#465058;line-height:100%;padding:6px 10px;border-radius:3px;background-color: #fff;
+    /*过渡*/
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.header .info .lgBtn:hover,
+.header .info .lgBtn.active {
+    background-color:#4EC2EA;color:#fff
+}
+
+/*尾部*/
+.footer {
+    position: relative;
+    height: 200px;
+    background-color: #F9F9F9
+}
+.footer .frlink{padding:27px 0 0 0;overflow:hidden;text-align:center}
+.footer .frlink h1{font-size:14px;font-weight:normal;color:#000}
+.footer .frlink .linkbox{line-height:1;padding:16px 0 0 0}
+.footer .frlink .linkbox a{padding:0 19px;color:#333;white-space:nowrap}
+.footer .frlink .linkbox a:hover{color:#4EC2EA}
+.footer .frlink .linkbox span{color:#D4D4D4}
+.footer .contact-nav{width:100%;margin:0 auto;padding-top:43px;text-align:center;line-height:1;overflow:hidden}
+.footer .contact-nav a{color:#121212;font-size:14px;padding:0 33px;white-space: nowrap;}
+.footer .contact-nav a:hover{color:#4EC2EA}
+.footer p{ width:300px; margin:0 auto;text-align:left;font-size:12px;color:#121212;line-height:27px}
+
+.footer .f_email{
+    margin-top:50px;
+}
+.footer .f_email a {
+    color: #121212;
+    font-size:14px;
+    letter-spacing: 0.5px;
+}
+.footer .f_email a:hover{text-decoration:underline}
+.footer .wechat{width:200px;height:200px;margin:20px auto 0}
+
+/*回到顶部 样式*/
+.backTop {
+    width: 96px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: -40px 0 0 -48px;
+    height: 40px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.backTopBtn {
+    width: 100%;
+    height: 96px;
+    color: #121212;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #F9F9F9;
+    cursor: pointer;
+    margin-top: 1px;
+}
+.backTopBtn img{ margin-top:10px;}
+.backTopBtn span{margin-top:3px;color:#676767;font-size:12px;display:block;}
+.backTopBtn span:hover{text-decoration: underline}
+
+/*海报*/
+#intro {
+    height: 450px;
+    padding-top: 74px;
+}
+/*接入延边农商银行资金存管*/
+/*.entry {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    background: 0 0;
+    z-index: 111;
+    overflow: hidden
+}*/

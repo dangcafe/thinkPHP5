@@ -1,0 +1,52 @@
+{extend name="index:index" /}
+{block name="title"}财务管理-确定转账金额{/block}
+{block name="mycss"}
+{/block}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">财务管理 -</span>
+                <span class="lgray-color">输入转账金额</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 添加交易账户</div>
+                <form class="form-horizontal" action='/admin/pay/charge' method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2">转账姓名
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" name="name" value="{$user_pay.name}" readonly>
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label class="col-sm-2">转账账号
+                    </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" name="account" value="{$user_pay.account}"  readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">转账金额
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"  name="money" value='' placeholder="单位:元" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >确定</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="myjs"}
+{/block}

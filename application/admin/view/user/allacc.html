@@ -1,0 +1,84 @@
+{extend name="index:index" /}
+{block name="main-content"}
+    <div class="main-content">
+        <div class="wrapper">
+            <ol class="breadcrumb">
+                <li>
+               <span class="gray-color">账户管理 -</span>
+               <span class="lgray-color">所有账户</span>
+                 </li>
+            </ol>
+            <div class="panel">
+                <div class="panel-body">
+                   <div class="main-heading clearfix">
+                   <span class="pull-left"><i class="icon icon-stop"></i> 所有账户{$lists->total()}位</span>
+
+                   </div>
+                    <table class="table table-borderless  table-right">
+
+                    </table>
+
+                    <table class="table table-center table-bordered">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>软件帐号</th>
+                                <th>密码</th>
+                                <th>开户手机号</th>
+                                <th>姓名</th>
+                                <th>银行卡绑定手机号</th>
+                                <th>身份证号</th>
+                                <th>身份证正面</th>
+                                <th>身份证反面</th>
+                                <th>银行卡号</th>
+                                <th>开户行</th>
+                                <th>邀请码</th>
+                                <th>注册时间</th>
+                                <th>更新时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tr_html">
+                        {volist name="lists" id="user"}
+                            <tr>
+                                <td>{$user.id}</td>
+                                <td>{$user.accountid}</td>
+                                <td>{$user.password}</td>
+                                <td>{$user.utel}</td>
+                                <td>{$user.realname}</td>
+                                <td>{$user.banktel}</td>
+                                <td>{$user.ppnum}</td>
+                                <td>
+                                    {if condition="$user.img1 != null "}
+                                        <img src="__UPLOADS__/{$user.img1}" style="width:100px;height:100px;">
+                                    {else /} 
+                                    还未上传
+                                    {/if}
+                                </td>
+                                <td>
+                                    {if condition="$user.img2 != null "}
+                                        <img src="__UPLOADS__/{$user.img2}" style="width:100px;height:100px;">
+                                    {else /} 
+                                    还未上传
+                                    {/if}
+                                </td>
+                                <td>{$user.banknum}</td>
+                                <td>{$user.bankname}</td>
+                                <td>{$user.invite}</td>
+                                <td>{$user.ctime|date="Y-m-d H:i:s",###}</td>
+                                <td>{$user.utime|date="Y-m-d H:i:s",###}</td>
+                                <td>删除/编辑/详情</td>
+                            </tr>
+                        {/volist}
+                            <tr>
+                                <td colspan="12">
+                                {$lists->render()}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}

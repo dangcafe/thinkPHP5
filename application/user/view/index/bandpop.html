@@ -1,0 +1,91 @@
+{extend name="index/index" /}
+
+{block name="title"}{:config('')}-实名认证{/block}
+{block name="mycss"}{/block}
+{block name="mybody"}
+    <span class="tab-div">
+        <div class="tab-div on">
+            <h2>实名认证</h2>
+            {if condition="$userlist.ppnum != null "}
+                    <p>
+                        您已完成实名认证,认证的用户为:<span style="color:green">{$userlist.realname}</span>
+                    </p>
+            {else /} 
+                <ul>
+                    <form action="/user/index/bandpop" method="post" id="popform" enctype="multipart/form-data">
+                        <li>
+                            <label>真实姓名</label>
+                            <span><input class="email-input" type="text" id='realname' name='realname' /></span>
+                        </li>
+                        <li>
+                            <label>身份证号</label>
+                            <span><input class="code-input" type="text"  id='ppnum' name='ppnum' /></span>
+                        </li>                    
+                        <li>
+                            <label>身份证正面</label>
+                            <span>
+                                <input type="file" class="email-input"  name="image[]">
+                            </span>
+                        </li>
+                        <li>
+                            <label>身份证反面</label>
+                            <span>
+                                <input type="file"  name="image[]">
+                            </span>
+                        </li>
+                    </form>
+                </ul>
+                <span class="save-div">
+                     <input class="save-btn bandpop" type="button"  value="保存资料"/>
+                </span>
+            {/if}
+        </div>
+    </span>
+{/block}
+{block name="myjs"}
+<script>
+    $(".bandpop").click(function(){
+        var realname = $("#realname").val();
+        if (realname=='') {
+            swal("请输入真实姓名！")
+            return false ;
+        }        
+        var ppnum = $("#ppnum").val();
+        if (ppnum=='') {
+            swal("请输入身份证号！")
+            return false ;
+        }        
+        var idimg0 = $("#idimg0").val();
+        if (idimg0=='') {
+            swal("请上传身份证正面")
+            return false ;
+        }        
+        var idimg1 = $("#idimg1").val();
+        if (idimg1=='') {
+            swal("请上传身份证反面")
+            return false ;
+        }
+        $('#popform').submit();
+    // $.ajax({
+    //     type: 'post',
+    //     dataType: "json",
+    //     url: "/user/index/bandpop",
+    //     data: {
+    //         ppnum:ppnum,
+    //         realname:realname,
+    //     },
+    //     success: function(data){
+    //         if (data.status ==200) {
+    //             alert("认证成功");
+    //             window.location.reload();
+    //         }else {
+    //             swal(data.message);
+    //         }
+    //     },
+    //     error: function(data){
+    //             swal('实名认证失败');
+    //     }
+    // });
+    })
+</script>
+{/block}

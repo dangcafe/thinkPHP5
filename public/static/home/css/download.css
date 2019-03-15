@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* 通用 */
+body {font-size:14px;}
+.header {box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.wrap{ width:1024px; margin:0 auto; text-align:center;}
+li {float:left; text-align:center;}
+.icon {display:inline-block;}
+.footer, .backTopBtn {border:1px solid #f2f2f2;}
+/* SDK */
+.intro_index {
+  height: 450px;
+  background: #071321 url("../images/download/banner03.png?v=e457917") no-repeat center center;
+}
+.sdk h2 {font-size:16px; color:#fff; margin-top: 50px; font-weight:500; line-height:22px; background:url(../images/download/head.png) no-repeat 60px 0;}
+.sdk ul {margin:72px 59px 100px 59px;}
+.sdk li {width:210px; height:260px; margin:0 7px; background:url(../images/download/bg.png) no-repeat;}
+.icon {background:url(../images/download/icon.png) no-repeat 7px 0;}
+.icon-top {width:50px; height:50px; margin-top:18px;}
+.icon-bottom {display:inline-block; height:12px; width:15px; margin-left:5px;}
+.sdk .icon2 {background-position:-43px 0;}
+.sdk .icon3 {background-position:-92px 0;}
+.sdk .icon4 {background-position:-142px 0;}
+.sdk .icon5 {background-position:-392px -25px;}
+.sdk h3 {font-size:18px; color:#333; font-weight:normal; margin-top:30px; margin-bottom:6px;}
+.sdk li p {color:#333; line-height:22px;}
+.sdk .top {color:#666;}
+.sdk a {display:inline-block; width:120px; height:28px; border-radius: 18px; padding-top:8px; margin-top:60px; color:#4cc1e9; transition:all 0.3s;}
+.sdk .down:hover {background-color:#4cc1e9; color:#fff;}
+.sdk .down:hover .icon5 {background-position:-392px -5px;}
+.sdk .wait:hover {background-color:#F5F5F5; }
+
+.sdk li:hover .icon1 {background-position:-194px 1px;}
+.sdk li:hover .icon2 {background-position:-243px 0;}
+.sdk li:hover .icon3 {background-position:-292px 0;}
+.sdk li:hover .icon4 {background-position:-343px 1px;}
+.sdk .remark {color:#ff7200; padding-top:25px;}
+.sdk ul li{position: relative;}
+.download-android,.download-ios {width: 180px;height: 180px;position: absolute;bottom: 5px;left: 15px;}
+.download-android:hover{background:url(../../common/image/anzhuo.png) no-repeat center center;background-size: 180px 180px;}
+.download-ios:hover{background:url(../../common/image/ios.png) no-repeat center center;background-size: 180px 180px;}

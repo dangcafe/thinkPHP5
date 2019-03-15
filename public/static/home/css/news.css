@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 通用 */
+body {font-size:14px;}
+.header {box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.wrap{ width:1024px; margin:0 auto; text-align:center;}
+.footer, .backTopBtn {border:1px solid #f2f2f2;}
+/* 搜索 */
+.intro_index {
+  height: 450px;
+  background: url("../images/news/banner02.png") no-repeat center center;
+}
+/* 左侧 */
+.content {padding-bottom:63px; padding-top: 40px; width: 1200px;}
+.content .navbar{ width: 250px; }
+.content .navbar li {height:30px; width:182px; padding:42px 0 42px 62px; border-right:1px solid #ccc;}
+.content .icon {display:inline-block; width:30px; height:30px; border-radius:4px;}
+.content p {font-size:18px; color:#000; line-height:30px; text-indent:14px;transition: all 0.2s}
+.content .navbar a:hover p {font-size:20px; transition:all 0.2s;}
+.content .icon1 {background-color:#ff824b; background-position:4px 4px;}
+.content .icon2 {background-color:#00ce74; background-position:-26px 3px;}
+.content .icon3 {background-color:#08bff8; background-position:-57px 3px;}
+.content .icon4 {background-color:#ffa31e; background-position:-87px 3px;}
+.content .icon5 {background-color:#ff717e; background-position:-117px 3px;}
+.content .icon6 {background-color:#84e077; background-position:-147px 3px;}
+.content .navbar span {display:block; width:10px; height:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc; background-color:#fff; position:relative; top:9px; left:177px; transform:rotateZ(45deg); filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',M11=0.707, M12=-0.707, M21=0.707,M22=0.707);}
+.conceal {visibility: hidden;}
+/* 右侧 */
+.question {padding-top:32px; padding-left: 60px;  width: 850px;}
+.question li {text-align:left;  background: url("../images/news/point.jpg") no-repeat scroll 0 18px;padding: 10px 0 10px 20px;cursor: pointer;}
+.question li span{float: right;color: #c6c6c6;}
+.question a {font-size:16px; color:#333;}
+.question a:hover {color:#00aaef;}
+.question li p {width:580px; font-size:14px; color:#666; text-indent:0; line-height:24px;}
+.question .hide {display:none;}
+.question .show {display:block;}

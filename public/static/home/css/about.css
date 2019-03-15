@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body {
+  font-size: 14px;
+  color: #666;
+}
+body .intro_index {
+  height: 450px;
+  background: #001242 url("../images/about/banner04.png") no-repeat center center;
+}
+/*about*/
+.about {
+  margin-top: 30px;
+}
+.about .wrap {
+  text-align: center;
+}
+.about .wrap h2 {
+  padding-top: 15px;
+  padding-bottom: 40px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+.about .wrap h2::after {
+  content: 'platform Introduction';
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+.crude .wrap h2::after{
+	 content:'' !important;
+}
+.about p {
+  line-height: 24px;
+}
+.about p img {
+  padding: 60px  0 100px 0;
+  display: inline-block;
+}
+.crude p img{
+	padding: 0 !important;
+}
+.crude-img{
+	padding-bottom: 60px;
+}
+.about ul {
+  display: inline-block;
+}
+.about ul li {
+  padding: 0 2px;
+  margin-top: 75px;
+}
+.about .images {
+  margin-top: 143px;
+}

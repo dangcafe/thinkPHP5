@@ -1,0 +1,50 @@
+{extend name="index:index" /}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">账号管理 -</span>
+                <span class="lgray-color">编辑账号</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 编辑账号</div>
+                <form class="form-horizontal" action='/admin/account/edit' method="post">
+                    <input type="hidden" name="id" value="{$account.id}">
+                    <div class="form-group">
+                        <label class="col-sm-2">软件账号
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"   name="account" value="{$account.account}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">密码
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"  name="password" value="{$account.password}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">状态
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                        <input type="radio" name="status" {$account.status=='已使用' ? "checked" : ''} value="1"/>已使用  
+                        <input type="radio" name="status" {$account.status=='已使用' ? '': "checked" }  value="0"/>未使用
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >确定</button>
+                            <button type="button" name="gbbutton"  class="return-btn " onclick="history.go(-1)">返回</button>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,37 @@
+{extend name="index:index" /}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">系统设置 -</span>
+                <span class="lgray-color">所有设置</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 所有设置</div>
+                <form class="form-horizontal" action='/admin/setting/update' method="post">
+                    {volist name="setting" id="set"}
+                    <div class="form-group">
+                        <label  class="col-sm-2">{$set.remind}
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"  name="{$set.id}" value='{$set.value}'>
+                        </div>
+                    </div>
+                    {/volist}
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >更新</button>
+                            <button type="button" name="gbbutton"  class="return-btn " onclick="history.go(-1)">返回</button>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+

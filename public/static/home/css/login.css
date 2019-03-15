@@ -1,0 +1,128 @@
+@charset "utf-8";
+.login-body {
+	background: #00AAEF;
+}
+
+.login-warp {
+	height: 600px;
+	position: relative;
+}
+
+.login-main,
+.registered-main {
+	width: 500px;
+	padding-top: 36px;
+	;
+	border-radius: 4px;
+	position: absolute;
+	background: #fff;
+	left: 50%;
+	top: 50%;
+	margin-top: -118px;
+	margin-left: -250px;
+}
+
+.login-main {
+	height: 300px;
+}
+
+.registered-main {
+	height: 420px !important;
+}
+
+.login-main .login-title,
+.registered-main .login-title {
+	font-size: 20px;
+	text-align: center;
+}
+
+.login-main input,
+.registered-main input {
+	width: 420px;
+	display: block;
+	border-radius: 4px;
+}
+
+.login-main .login-text,
+.registered-main .login-text {
+	height: 28px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	margin: 20px auto 0 auto;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.login-main .login-btn,
+.registered-main .login-btn {
+	width: 446px;
+	color: #fff;
+	background: #00AAEF;
+	height: 38px;
+	padding: 6px 12px;
+	border: none;
+	margin: 20px auto 0 auto;
+}
+
+.login-main .login-link,
+.registered-main .login-link {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.login-link a {
+	color: #00AAEF;
+}
+
+.registered-text {
+	width: 200px !important;
+}
+
+.registered-code {
+	width: 446px;
+	margin: 0 auto;
+}
+
+.registered-code .code-text {
+	width: 200px !important;
+	display: inline-block !important;
+	height: 28px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	margin-top: 20px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.registered-code .code-btn {
+	display: inline-block !important;
+	width: 200px !important;
+	height: 40px !important;
+	background: #00AAEF !important;
+	color: #fff;
+	border: 1px solid #00AAEF;
+	margin-left: 15px;
+}
+
+.footer-number {
+	width: 250px;
+	margin: 130px auto 0 auto;
+	color: #fff;
+}

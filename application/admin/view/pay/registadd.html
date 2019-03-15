@@ -1,0 +1,38 @@
+{extend name="index:index" /}
+{block name="title"}财务管理-确定转账金额{/block}
+{block name="mycss"}
+{/block}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">财务管理 -</span>
+                <span class="lgray-color">三方开户</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 环迅三方开户</div>
+                <form class="form-horizontal" action='/admin/pay/registadd' method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2">用户编号
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" name="id" value="" >
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >确定</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="myjs"}
+{/block}

@@ -1,0 +1,46 @@
+{extend name="index:index" /}
+{block name="title"}后台管理系统-添加交易账号{/block}
+{block name="mycss"}
+{/block}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">交易账号管理 -</span>
+                <span class="lgray-color">添加账户</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 添加交易账户</div>
+                <form class="form-horizontal" action='/admin/account/add' method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2">账号
+                    </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" name="account" placeholder="批量添加用to分开 例： 66to88">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">密码
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"  name="password" value='000' placeholder="交易密码:默认为888" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >添加</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="myjs"}
+{/block}

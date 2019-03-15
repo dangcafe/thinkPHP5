@@ -1,0 +1,62 @@
+{extend name="index:index" /}
+{block name="main-content"}
+    <div class="main-content">
+        <div class="wrapper">
+            <ol class="breadcrumb">
+                <li>
+               <span class="gray-color">财务管理 -</span>
+               <span class="lgray-color">已实名用户</span>
+                </li>
+            </ol>
+            <div class="panel">
+                <div class="panel-body">
+                   <div class="main-heading clearfix">
+                         <form action="{:url('/admin/pay/search')}" method='post'>
+                            <select name="param" >
+                                <option value="realname" checked>姓名</option>
+                                <option value="accountid">交易账号</option>
+                            </select>
+                            <input type="text" name='value' value='' style="height:22px;width:100px;">
+                            <input type="submit" value='搜索'>
+                        </form>
+                   </div>
+                    <table class="table table-borderless  table-right">
+
+                    </table>
+
+                    <table class="table table-center table-bordered">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>软件帐号</th>
+                                <th>姓名</th>
+                                <th>身份证号</th>
+                                <th>银行卡号</th>
+                                <th>手机号</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tr_html">
+                            <tr>
+                                <td>{$lists.id}</td>
+                                <td>{$lists.accountid}</td>
+                                <td>{$lists.realname}</td>
+                                <td>{$lists.ppnum}</td>
+                                <td>{$lists.banknum}</td>
+                                <td>{$lists.banktel}</td>
+                                <td>
+                                    <a href="/admin/pay/regist/id/{$lists.id}"  target="_Blank"><button class="btn"><i class="icon icon-file-text-o"></i> 开户</button></a>
+                                    <a href="/admin/pay/opay/id/{$lists.id}" target="_Blank"><button class="btn btn-danger"><i class="icon icon-file-text-o"></i> 转账</button></a>
+                                    <a href="/admin/pay/tixian/id/{$lists.accountid}"   target="_Blank"><button class="btn"><i class="icon icon-file-text-o"></i> 提现</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <form action="/admin"></form>
+    </div>
+{/block}
+{block name="myjs"}
+{/block}

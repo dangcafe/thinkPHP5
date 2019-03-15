@@ -1,0 +1,56 @@
+{extend name="index:index" /}
+{block name="main-content"}
+<div class="main-content  ">
+    <div class="wrapper">
+        <ol class="breadcrumb">
+            <li>
+                <span class="gray-color">用户管理 -</span>
+                <span class="lgray-color">编辑账户</span>
+            </li>
+        </ol>
+        <div class="panel min-body">
+            <div class="panel-body">
+                <div class="main-heading"> <i class="icon icon-stop"></i> 编辑账户</div>
+                <form class="form-horizontal" action='/admin/user/edit' method="post">
+                    <input type="hidden" name="id" value="{$user.id}">
+                    <div class="form-group">
+                        <label class="col-sm-2">手机号
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"   name="utel" value="{$user.utel}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">密码
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control"  name="upass" value="{$user.upass}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2">邀请码
+                        </label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" name='invite'  value="{$user.invite}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label  class="col-sm-2">状态
+                    </label>
+                    <div class="col-md-6 col-sm-10">
+                        <input type="text" class="form-control" name='invite'  value="{$user.status|status}">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-md-6 col-sm-10">
+                            <button type="submit"  class="submit_btn" >确定</button>
+                            <button type="button" name="gbbutton"  class="return-btn " onclick="history.go(-1)">返回</button>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

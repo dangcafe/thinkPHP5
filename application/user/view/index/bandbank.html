@@ -1,0 +1,83 @@
+{extend name="index/index" /}
+
+{block name="title"}{:config('')}-银行卡绑定{/block}
+{block name="mycss"}{/block}
+{block name="mybody"}
+<span class="tab-div">
+    <div class="tab-div on">
+        <h2>绑定银行卡</h2>
+        {if condition="$userlist.banknum == null "}
+            <ul>
+                <li>
+                    <label>归属行(具体到支行)</label>
+                    <span><input class="code-input"  id='bankname' type="text" placeholder="例:中国银行上海陆家嘴支行" /></span>
+                </li>                
+                <li>
+                    <label>银行卡号</label>
+                    <span><input class="code-input" id='banknum'  type="text" placeholder="例:62284804*******39" /></span>
+                </li>
+                <li>
+                    <label>该卡绑定的手机号</label>
+                    <span><input class="email-input" id='banktel'  type="text" placeholder="例:131****8888"/></span>
+                </li>
+            </ul>
+            <span class="save-div">
+                 <input class="save-btn bandbank" type="button"  value="保存资料"/>
+            </span>
+        {else /} 
+            <ul>
+                <li>
+                    <label>归属行</label>
+                    <span>{$userlist.bankname}</span>
+                </li>                
+                <li>
+                    <label>银行卡号</label>
+                    <span>{$userlist.banknum}</span>
+                </li>
+            </ul>
+        {/if}
+    </div>
+</span>
+{/block}
+{block name="myjs"}
+<script>
+    $(".bandbank").click(function(){
+        var bankname = $("#bankname").val();
+        if (bankname=='') {
+            swal("请输入归属行！")
+            return false ;
+        }        
+        var banknum = $("#banknum").val();
+        if (banknum=='') {
+            swal("请输入银行卡号！")
+            return false ;
+        }        
+        var banktel = $("#banktel").val();
+        if (banktel=='') {
+            swal("请输入手机号！")
+            return false ;
+        }
+    $.ajax({
+        type: 'post',
+        dataType: "json",
+        url: "/user/index/bandbank",
+        data: {
+            bankname:bankname,
+            banknum:banknum,            
+            banktel:banktel,
+        },
+        success: function(data){
+            if (data.status ==200) {
+                alert("认证成功");
+                window.location.reload();
+            }else {
+                swal(data.message);
+            }
+        },
+        error: function(data){
+                swal('实名认证失败');
+        }
+    });
+    })
+</script>
+{/block}

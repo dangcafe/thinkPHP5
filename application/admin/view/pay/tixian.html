@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提现</title>
+</head>
+<body>
+		<form name="MerOrder" id="MerOrder" method="post" action="https://ebp.ips.com.cn/fpms-access/action/withdrawal/withdrawal.html">
+			<input type="hidden" name="ipsRequest" value="<ipsRequest><argMerCode>209603</argMerCode><arg3DesXmlPara>{$ipsRequest}</arg3DesXmlPara></ipsRequest>"/>
+			<input type="submit">
+		</form>
+     <script language="javascript">
+     	setTimeout(document.getElementById('MerOrder').submit(),100)
+     </script>
+</body>
+</html>

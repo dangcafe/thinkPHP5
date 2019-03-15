@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<form name="MerOrder" id="sendCoOrder" method="post" action="https://ebp.ips.com.cn/fpms-access/action/trade/transfer.do">
+			<input type="hidden" name="ipsRequest" value="<ipsRequest><argMerCode>209603</argMerCode><arg3DesXmlPara>{$ipsRequest}</arg3DesXmlPara></ipsRequest>"/>
+		</form>
+     <script language="javascript">
+     	setTimeout(document.getElementById('sendCoOrder').submit(),100)
+     </script>
+</body>
+</html>

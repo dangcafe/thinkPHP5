@@ -1,0 +1,20 @@
+{extend name="index/index" /}
+{block name="title"}{:config('')}-{$data.message} {/block}
+{block name="mycss"}{/block}
+{block name="mybody"}
+      <span class="tab-div">
+          <div class="on" style="text-align: center; padding-top: 150px;">
+            <p style="color:#337ab7;"><a href="{$data.url}">{$data.message}</a></p>
+            <p style="color:#666; margin-top: 10px;">将在3秒后跳转去认证</p>
+          </div>
+        </span>
+{/block}
+{block name="myjs"}
+<script>
+  window.onload = function(){
+  setTimeout(function(){
+  window.location.href="{$data.url}" 
+  },3000);  
+  }
+</script>
+{/block}

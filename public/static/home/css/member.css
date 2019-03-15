@@ -1,0 +1,240 @@
+@charset "UTF-8";
+.member-top{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+
+	background: #fff;
+}
+.member-header{
+	width: 1200px;
+	margin: 0 auto;
+}
+.member-body{
+	background: #efefef;
+}
+.member-center{
+	float: left;
+	font-size:18px ;
+}
+.member-login{
+	float: right;
+}
+.tabar{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.tabar div {
+	margin:0;
+	padding:0;
+
+
+	display:none;
+}
+.tab {
+	margin:0;
+	padding:30px 0;
+	list-style:none;
+	overflow:hidden;
+	
+}
+.tab{
+	width: 250px;
+	background: #fff;
+	float: left;
+}
+.tab-div{
+     width: 820px;
+	float: left;
+	margin-left: 20px;
+	background: #fff;
+	padding: 20px 10px;;
+}
+ .tab-div .on {
+	display:block;
+}
+.tab li {
+
+	width:220px;
+	height:40px;
+	color:#555;
+	text-align:center;
+	line-height:40px;
+	margin: 0 auto;
+	cursor:pointer;
+}
+
+.tab li.cur {
+		background: #337ab7;
+		color: #fff;
+}
+.tab-div h2{
+	color: #333;
+	background: #f5f5f5;
+	font-weight: normal;
+	font-size: 16px;
+padding: 10px 5px;
+margin: 20px 10px;
+}
+.tab-div li{
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;;
+}
+
+.tab-div label{
+  float: left;
+  width: 200px;;
+}
+.tab-div input{
+	    display: block;
+    width:400px;
+    height: 34px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.save-div{
+	display: block;
+	 width: 100px;
+	  margin:20px auto 0 auto;
+}
+.save-btn{
+	text-align: center;
+    color: #fff !important;
+    width: 80px !important;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important;
+    border: none !important;
+    
+}
+.tab-div1 li{
+	height: 50px;
+	
+}
+.tab-div1 label{
+  float: left;
+  width: 700px;
+  padding: 10px 0;
+}
+.tab-div1 button{
+	margin-top: 20px;
+}
+.per-account p{
+	height: 100px;
+	background: #000000;
+}
+  /*灰色遮罩层*/
+.fade{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+/*弹出层*/ 
+.pop{
+    width: 400px;
+    height: 300px;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    z-index: 999;
+    border-radius: 5px;
+    display: none;
+}   
+.pop p.title{
+    text-align: left;
+    font-size: 18px;
+    margin-left: 30px;
+    color: #ccc;
+    margin-top: 20px;
+}
+.pop input{
+	 display: block;
+    width:300px;
+    height: 34px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin-top: 10px;
+    margin: 15px auto 0 auto;
+}
+.pop-sure{
+	text-align: center;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 240px;
+    margin-top: 30px;
+}
+.pop-cancle{
+	text-align: center;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+  
+}
+.pop-phone span{
+	display: block;
+	color: #000;
+	margin:20px 0 0 30px;
+}
+.pop-phone input{
+	width: 100px !important;
+	display: inline-block;
+	margin-left: 30px;
+
+}
+.pop-code{
+	background: #5cb85c !important;
+	border: #5cb85c !important;
+	color: #fff !important;
+}
+.per-footer{
+	width: 100%;
+	background: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+}
+.padding-main{
+	height: 150px;
+}
+#error-tips{
+	color: red;
+	display: block;
+	margin: 20px 0 0 10px;
+}
+.error-main{
+	color: red;
+	display: block;
+	margin: 10px 0 0 10px;
+}

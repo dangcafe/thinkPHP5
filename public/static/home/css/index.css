@@ -1,0 +1,569 @@
+@charset "UTF-8";
+body {
+  font-size: 14px;
+
+}
+body h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+}
+.wrap {
+  text-align: center;
+}
+/*banner*/
+.intro_index {
+  height: 450px;
+  background: url("../images/index/banner01.png") no-repeat center center;
+}
+/*产品介绍*/
+.product {
+  height: 300px;
+}
+.product .wrap {
+  height: 100%;
+  text-align: left;
+  background: url("../images/index/produce.png") no-repeat -200px 50px;
+  width: 900px;
+  margin: 0 auto;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.9s ease;
+}
+.product .pro-cont {
+  float: right;
+  margin-right: 65px;
+}
+.product h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 80px;
+  transition: all 1.2s;
+  opacity: 0;
+  transform: translateX(200px);
+}
+.product p.desc {
+  padding-top: 20px;
+  line-height: 22px;
+  width: 500px;
+  color: #666;
+  text-align: justify;
+  transition: all 1.3s;
+  opacity: 0;
+  transform: translateX(200px);
+}
+.product.inview .wrap {
+  transform: translate3d(0, 0, 0);
+  background-position: 50px 50px;
+}
+.product.inview h2 {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.product.inview .desc {
+  opacity: 1;
+  transform: translateX(0px);
+}
+/*合作银行*/
+.bank {
+  height: 342px;
+  background: #F9F9F9;
+}
+.bank h2 {
+  color: #333333;
+  padding-top: 60px;
+}
+.bank .banks {
+  padding-top: 20px;
+}
+.bank .banks img {
+  margin-top: 20px;
+}
+.bank .banks img.img1 {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s;
+}
+.bank .banks img.img2 {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s 0.2s;
+}
+.bank.inview .banks .img1,
+.bank.inview .banks .img2 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+/*合作伙伴*/
+.partner {
+  height: 570px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.partner h2 {
+  color: #333333;
+  padding-top: 60px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s;
+}
+.partner .partners {
+  margin-top: 50px;
+}
+.partner .partners ul li + li {
+  margin-top: 35px;
+  font-size: 12px;
+}
+.partner .partners .ptn1 {
+  opacity: 0;
+  transform: translateX(-2000px);
+  transition: all 1s 0.4s ease;
+}
+.partner .partners .ptn3 {
+  opacity: 0;
+  transform: translateX(-2000px);
+  transition: all 1s 0.8s ease;
+}
+.partner .partners .ptn2 {
+  opacity: 0;
+  transform: translateX(2000px);
+  transition: all 1s 0.6s ease;
+}
+.partner .partners .ptn4 {
+  opacity: 0;
+  transform: translateX(2000px);
+  transition: all 1s 1s ease;
+}
+.partner.inview h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.partner.inview .partners .ptn1,
+.partner.inview .partners .ptn3,
+.partner.inview .partners .ptn2,
+.partner.inview .partners .ptn4 {
+  opacity: 1;
+  transform: translateX(0);
+}
+/*虚拟账户体系*/
+.account {
+  width: 100%;
+  height: 710px;
+  background: #f8f8f8 url("../images/index/background.png?v=4e61961") no-repeat center;
+  overflow: hidden;
+}
+.account .top {
+  color: #666;
+  line-height: 1;
+  padding-top: 22px;
+}
+.account .asystem {
+  padding: 47px 0 0 0;
+  position: relative;
+}
+.account .asystem .top,
+.account .asystem h2 {
+  position: relative;
+  z-index: 11;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s;
+  color: #333333;
+}
+.account .asystem .top {
+  transform: translateY(120px);
+}
+.account .asystem .acont {
+  position: relative;
+  z-index: 22;
+  padding: 0 100px;
+  width: 600px;
+  min-height: 372px;
+  margin: 48px auto 0;
+  overflow: hidden;
+}
+.account .asystem .acont .bottxt {
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all .8s;
+  color: #666666;
+}
+.account .asystem .acont .bottxt2 {
+  padding-top: 20px;
+  transition-delay: 1.5s;
+}
+.account .asystem .acont .bot-top {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+  position: relative;
+  margin: 20px auto 0;
+  width: 150px;
+  border: 1px dashed #c2c2c2;
+  padding: 11px;
+  border-radius: 4px;
+}
+.account .asystem .acont .bot-top .botp {
+  height: 70px;
+  line-height: 55px;
+  background: -webkit-linear-gradient(left, #59e4fd, #43abff);
+  background: -o-linear-gradient(right, #59e4fd, #43abff);
+  background: -moz-linear-gradient(right, #59e4fd, #43abff);
+  background: linear-gradient(to right, #59e4fd, #43abff);
+  overflow: hidden;
+  clear: both;
+  border-radius: 4px;
+}
+.account .asystem .acont .bot-top .botp p {
+  font-size: 16px;
+  padding-top: 7px;
+  color: #fff;
+}
+.account .asystem .acont .bot-top .botp .ptxt {
+  line-height: 75px;
+  padding: 0;
+}
+.account .asystem .acont .bot-top .hzline {
+  position: absolute;
+  bottom: -20px;
+  left: 85px;
+  height: 18px;
+  width: 2px;
+  border-left: 1px solid #D5F1FA;
+}
+.account .asystem .acont .BTP2 {
+  transition-delay: 1s;
+}
+.account .asystem .acont .bot-main {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s .5s;
+  position: relative;
+  z-index: 12;
+  margin: 21px auto 0;
+  border-radius: 10px;
+  width: 380px;
+  height: 145px;
+  background: url("../images/index/bg_account.png?v=15ead75") no-repeat center bottom;
+  border: 1px dashed #c2c2c2;
+}
+.account .asystem .acont .bot-main .btit {
+  font-size: 14px;
+  padding-top: 12px;
+  color: #333333;
+}
+.account .asystem .acont .bot-main ul {
+  position: relative;
+  top: 43px;
+  color: #ffffff;
+}
+.account .asystem .acont .bot-main ul li {
+  float: left;
+  text-align: center;
+  width: 82px;
+}
+.account .asystem .acont .bot-main ul li:nth-of-type(1) {
+  padding-left: 16px;
+}
+.account .asystem .acont .bot-main ul li:nth-of-type(2) {
+  padding-left: 53px;
+}
+.account .asystem .acont .bot-main ul li:nth-of-type(3) {
+  padding-left: 53px;
+}
+.account .asystem .acont .bot-foot {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s .8s;
+  color: #666666;
+  width: 45px;
+  height: 62px;
+  clear: both;
+  margin: 2px auto;
+  background: url("../images/index/bg_account.png?v=15ead75") no-repeat left top;
+}
+.account .asystem .acont .bot-foot span {
+  display: block;
+  margin: auto;
+  width: 20px;
+  font-size: 12px;
+  line-height: 125%;
+}
+.account .asystem .acont .bside {
+  opacity: 0;
+  transition: all 1s 1s;
+  position: absolute;
+  top: 62px;
+  color: #717171;
+  color: #666666;
+  width: 300px;
+  height: 370px;
+  background: url("../images/index/bg_account_main.png?v=987edc2") no-repeat 0 0;
+}
+.account .asystem .acont .bside .ltext {
+  line-height: 42px;
+}
+.account .asystem .acont .bside .ctext {
+  position: absolute;
+  width: 85px;
+  top: 217px;
+  text-align: center;
+}
+.account .asystem .acont .bside .btext {
+  position: absolute;
+  bottom: 0;
+  line-height: 42px;
+  width: 100%;
+  text-align: center;
+}
+.account .asystem .acont .botleft {
+  left: 0;
+  transform: translateX(-500px);
+}
+.account .asystem .acont .botright {
+  right: 0;
+  background-position: right top;
+  transform: translateX(500px);
+}
+.account .asystem.inview .top,
+.account .asystem.inview h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .bottxt1,
+.account .asystem.inview .bottxt2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .BTP1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .BTP2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .bot-main {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .bot-foot {
+  opacity: 1;
+  transform: translateY(0);
+}
+.account .asystem.inview .bside {
+  opacity: 1;
+  transform: translateX(0);
+}
+/*我们的优势*/
+.threeChar {
+  height: 238px;
+  height: 380px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(left, #33aceb, #358fcd);
+  background: -o-linear-gradient(right, #33aceb, #358fcd);
+  background: -moz-linear-gradient(right, #33aceb, #358fcd);
+  background: linear-gradient(to right, #33aceb, #358fcd);
+}
+.threeChar h2 {
+  color: #ffffff;
+  margin-top: 60px;
+}
+.threeChar ul {
+  width: 900px;
+  margin: 80px auto 0;
+}
+.threeChar ul li {
+  width: 150px;
+  text-align: center;
+  float: left;
+}
+.threeChar ul li a {
+  position: relative;
+  transition: all .2s;
+  display: block;
+  width: 62px;
+  height: 62px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: auto;
+  background: url("../images/index/advantage.png?v=64e2679") no-repeat left center;
+}
+.threeChar ul li a:hover {
+  border: 2px solid transparent;
+}
+.threeChar ul li a:hover:after {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  width: 62px;
+  height: 62px;
+  left: -1px;
+  top: -1px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+  background: linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7', GradientType=0);
+  background-color: #637aad;
+  animation-name: ripplex;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.threeChar ul li .safe {
+  background-position-x: 10px;
+}
+.threeChar ul li .cost {
+  background-position-x: -183px;
+}
+.threeChar ul li .speed {
+  background-position-x: -380px;
+}
+.threeChar ul li .efficient {
+  background-position-x: -578px;
+}
+.threeChar ul li p {
+  color: #fff;
+  padding-top: 18px;
+}
+.threeChar ul li p:nth-of-type(2) {
+  padding-top: 10px;
+  font-size: 12px;
+}
+.threeChar ul li + li {
+  margin-left: 100px;
+}
+@keyframes ripplex {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: .3;
+    transform: scale(1);
+  }
+}
+/*专业团队-样式*/
+.teams {
+  height: 700px;
+  background: #4EC2EA;
+}
+.teams h2 {
+  padding-top: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s;
+}
+.teams p.top {
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s 0.4s;
+}
+.teams .trees {
+  margin: 0px auto 0;
+  width: 900px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.teams .trees .tree {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(1000px);
+}
+.teams .trees .tree.t1 {
+  left: 0;
+  z-index: 1 ;
+}
+.teams .trees .tree.t2 {
+  left: 120px;
+  z-index: 10;
+}
+.teams .trees .tree.t3 {
+  left: 365px;
+  z-index: 8 ;
+}
+.teams .trees .tree.t4 {
+  right: 0;
+  z-index: 6 ;
+}
+.teams .trees .tag {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(1000px);
+}
+.teams .trees .tag.tag1 {
+  top: 187px;
+  left: 60px;
+}
+.teams .trees .tag.tag2 {
+  top: 120px;
+  left: 266px;
+}
+.teams .trees .tag.tag3 {
+  top: 40px;
+  left: 512px;
+}
+.teams .trees .tag.tag4 {
+  top: 170px;
+  right: 103px;
+}
+.teams .trees-text {
+  margin-top: 62px;
+}
+.teams .trees-text p.bottom {
+  color: #ffffff;
+  line-height: 22px;
+}
+.teams.inview h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.teams.inview p.top {
+  opacity: 1;
+  transform: translateY(0);
+}
+.teams.inview .tree {
+  opacity: 1;
+  transition-delay: 0.7s;
+  transform: translateY(0);
+}
+.teams.inview .tag {
+  opacity: 1;
+  transition-delay: 0.7s;
+  transform: translateY(0);
+}
+.teams.inview .tag.tag1 {
+  transition-delay: 0.2s;
+}
+.teams.inview .tag.tag2 {
+  transition-delay: 0.3s;
+}
+.teams.inview .tag.tag3 {
+  transition-delay: 0.4s;
+}
+.teams.inview .tag.tag4 {
+  transition-delay: 0.5s;
+}
+.teams.inview .tree.t1 {
+  transition-delay: 0.2s;
+}
+.teams.inview .tree.t2 {
+  transition-delay: 0.3s;
+}
+.teams.inview .tree.t3 {
+  transition-delay: 0.4s;
+}
+.teams.inview .tree.t4 {
+  transition-delay: 0.5s;
+}

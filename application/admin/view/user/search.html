@@ -1,0 +1,61 @@
+{extend name="index:index" /}
+{block name="main-content"}
+    <div class="main-content">
+        <div class="wrapper">
+            <ol class="breadcrumb">
+                <li>
+               <span class="gray-color">财务管理 -</span>
+               <span class="lgray-color">已实名用户</span>
+                </li>
+            </ol>
+            <div class="panel">
+                <div class="panel-body">
+                   <div class="main-heading clearfix">
+                         <form action="{:url('/admin/user/search')}" method='post'>
+                            <select name="param" >
+                                <option value="utel" checked>手机号</option>
+                               
+                            </select>
+                            <input type="text" name='value' value='' style="height:22px;width:100px;">
+                            <input type="submit" value='搜索'>
+                        </form>
+                   </div>
+                    <table class="table table-borderless  table-right">
+
+                    </table>
+
+                    <table class="table table-center table-bordered">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>手机号</th>
+                                <th>密码</th>
+                                <th>状态</th>
+                                <th>创建时间</th>
+                                <th>更新时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tr_html">
+                            <tr>
+                               <td>{$user.id}</td>
+                                <td>{$user.utel}</td>
+                                <td>{$user.upass}</td>
+                                <td>{$user.status|status}</td>
+                                <td>{$user.ctime}</td>
+                                <td>{$user.utime}</td>
+                                <td>
+                                    <a href="/admin/user/edit/id/{$user.id}"><button class="btn"><i class="icon icon-file-text-o"></i> 编辑</button></a>
+                                    <button class="btn btn-danger userdel"><i class="icon icon-trash"></i> 删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <form action="/admin"></form>
+    </div>
+{/block}
+{block name="myjs"}
+{/block}
